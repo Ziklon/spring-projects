@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.darkbit.appfarquisa.domain.Rol" table="tb_rol">
+		<id name="rolId" type="integer">
+			<column name="ROL_ID"/>
+			<generator class="identity"/>
+		</id>
+		<property name="descripcion" type="string">
+			<column name="DESCRIPCION" not-null="true"/>			
+		</property>
+	</class>
+</hibernate-mapping>

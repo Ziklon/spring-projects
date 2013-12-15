@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.darkbit.appfarquisa.domain.Empresa" table="tb_empresa">
+		<id name="empresaId" type="integer">
+			<column name="EMPRESA_ID"/>
+			<generator class="identity"/>
+		</id>		
+		<property name="descripcion" type="string">
+			<column name="DESCRIPCION" not-null="true"/>			
+		</property>
+		
+		<many-to-one name="sede" class="com.darkbit.appfarquisa.domain.Sede" fetch="select">
+            <column name="SEDE_ID" not-null="true" />
+        </many-to-one>		
+
+	</class>
+</hibernate-mapping>
