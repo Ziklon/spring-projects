@@ -1,6 +1,7 @@
 package com.darkbit.appfarquisa.dao.impl;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.darkbit.appfarquisa.dao.SedeDao;
+import com.darkbit.appfarquisa.service.SedeService;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -16,19 +17,18 @@ import com.darkbit.appfarquisa.dao.SedeDao;
 public class SedeDaoImplTest {
 
 	@Autowired
-	private  SedeDao sedeDao;
+	private  SedeService sedeService;
 
 	@Test
 	public void testAddNewSede() {
-		assertNotNull(sedeDao);
+		assertNotNull(sedeService);
 		
 	}
 	
 	
-	
 	@Test
 	public void testgetAllSede(){
-		assertEquals(sedeDao.getAll().size(), 1004);
+		assertEquals(sedeService.getAll().size(), 1004);
 	}
 	
 
