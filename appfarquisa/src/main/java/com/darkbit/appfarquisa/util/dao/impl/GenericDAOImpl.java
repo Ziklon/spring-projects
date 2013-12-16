@@ -4,8 +4,10 @@ import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
+import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Projections;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.darkbit.appfarquisa.util.Pagination;
@@ -54,11 +56,11 @@ public abstract class GenericDAOImpl<T, Id extends Serializable> {
 		return query.list();
 	}
 
-	public Integer countAll() {
-		return ((Integer) sessionFactory
-				.getCurrentSession()
-				.createQuery("select count(*) from " + classObj.getSimpleName())
-				.iterate().next()).intValue();
+	public Long countAll() {
+		Criteria criteria = sessionFactory.getCurrentSession().createCriteria(classObj);
+		criteria.setProjection(Projections.rowCount());
+		return Long.valueOf(criteria.uniqueResult().toString());
+		
 	}
 
 }

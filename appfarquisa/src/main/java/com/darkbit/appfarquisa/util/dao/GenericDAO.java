@@ -17,7 +17,7 @@ public interface GenericDAO<T, Id extends Serializable> {
 	
 	public List<T> getAll(Pagination pagination);
 	
-	public Integer countAll();
+	public Long countAll();
 	
 
 }

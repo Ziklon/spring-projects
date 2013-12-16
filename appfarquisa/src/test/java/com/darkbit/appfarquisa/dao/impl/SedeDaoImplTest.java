@@ -10,6 +10,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.darkbit.appfarquisa.service.SedeService;
+import com.darkbit.appfarquisa.util.Pagination;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -28,7 +29,9 @@ public class SedeDaoImplTest {
 	
 	@Test
 	public void testgetAllSede(){
-		assertEquals(sedeService.getAll().size(), 1004);
+		Pagination pagination=new Pagination(0);
+		assertEquals(sedeService.getAll(pagination).size(), 10);
+		assertEquals(pagination.getTotalCount().longValue(), 1004L);
 	}
 	
 
