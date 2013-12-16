@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.darkbit.appfarquisa.dao.SedeDao;
 import com.darkbit.appfarquisa.domain.Sede;
 import com.darkbit.appfarquisa.service.SedeService;
+import com.darkbit.appfarquisa.util.Pagination;
 
 @Transactional(readOnly = true)
 @Service
@@ -33,6 +34,10 @@ public class SedeServiceImpl implements SedeService {
 
 	public List<Sede> getAll() {
 		return sedeDao.getAll();
+	}
+
+	public List<Sede> getAll(Pagination pagination) {
+		return sedeDao.getAll(pagination);
 	}
 
 }

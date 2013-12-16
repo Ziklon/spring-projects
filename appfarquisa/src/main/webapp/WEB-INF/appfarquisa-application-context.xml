@@ -12,7 +12,7 @@
 	<context:component-scan base-package="com.darkbit.appfarquisa" />
 
 
-	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="mappingLocations">
 			<list>

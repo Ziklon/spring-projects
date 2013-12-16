@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.darkbit.appfarquisa.dao.EmpleadoDao;
 import com.darkbit.appfarquisa.domain.Empleado;
 import com.darkbit.appfarquisa.service.EmpleadoService;
+import com.darkbit.appfarquisa.util.Pagination;
 
 @Transactional(readOnly = true)
 @Service
@@ -33,6 +34,10 @@ public class EmpleadoServiceImpl implements EmpleadoService {
 
 	public List<Empleado> getAll() {
 		return empleadoDao.getAll();
+	}
+
+	public List<Empleado> getAll(Pagination pagination) {
+		return empleadoDao.getAll(pagination);
 	}
 
 }
