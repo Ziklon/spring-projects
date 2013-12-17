@@ -4,21 +4,21 @@ public class Pagination {
 
 	private Integer start;
 	private Integer limit = Constant.PAGINATION_SIZE;
-	private Long totalCount;
+	private Integer totalCount;
 
 	public Pagination() {
 		start = 0;
-		totalCount=0L;
+		totalCount=0;
 	}
 
 	public Pagination(Integer start, Integer limit) {
 		this.limit = limit;
 		this.start = start;
-		this.totalCount=0L;
+		this.totalCount=0;
 	}
 
 	public Pagination(Integer start) {
-		this.totalCount=0L;
+		this.totalCount=0;
 		this.start = start;
 	}
 
@@ -38,11 +38,11 @@ public class Pagination {
 		this.limit = limit;
 	}
 
-	public Long getTotalCount() {
+	public Integer getTotalCount() {
 		return totalCount;
 	}
 
-	public void setTotalCount(Long totalCount) {
+	public void setTotalCount(Integer totalCount) {
 		this.totalCount = totalCount;
 	}
 	

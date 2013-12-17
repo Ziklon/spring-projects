@@ -2,6 +2,7 @@ package com.darkbit.appfarquisa.domain;
 
 public class Empleado {
 
+	private static final long serialVersionUID = 1L;	
 	public Integer empleadoId;
 	public Rol rol;	
 	public String correo;

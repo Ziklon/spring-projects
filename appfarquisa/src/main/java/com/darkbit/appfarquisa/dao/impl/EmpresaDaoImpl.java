@@ -4,6 +4,7 @@ package com.darkbit.appfarquisa.dao.impl;
 
 import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -21,7 +22,9 @@ public class EmpresaDaoImpl extends GenericDAOImpl<Empresa, Integer> implements 
 	}
 
 	public List<Empresa> getBySede(Sede sede) {
-		return null;
+		Query query = sessionFactory.getCurrentSession().createQuery("from Empresa where  sede= :sede ");
+		query.setParameter("sede", sede);
+		return query.list();
 	}
 
 }

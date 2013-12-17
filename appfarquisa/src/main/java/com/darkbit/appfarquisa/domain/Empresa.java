@@ -2,6 +2,8 @@ package com.darkbit.appfarquisa.domain;
 
 public class Empresa {
 
+	private static final long serialVersionUID = 1L;
+	
 	private Integer empresaId;
 	private String descripcion;
 	private Sede sede;

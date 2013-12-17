@@ -56,10 +56,10 @@ public abstract class GenericDAOImpl<T, Id extends Serializable> {
 		return query.list();
 	}
 
-	public Long countAll() {
+	public Integer countAll() {
 		Criteria criteria = sessionFactory.getCurrentSession().createCriteria(classObj);
 		criteria.setProjection(Projections.rowCount());
-		return Long.valueOf(criteria.uniqueResult().toString());
+		return Integer.valueOf(criteria.uniqueResult().toString());
 		
 	}
 

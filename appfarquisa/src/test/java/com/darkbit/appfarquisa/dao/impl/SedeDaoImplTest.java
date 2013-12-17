@@ -15,6 +15,7 @@ import com.darkbit.appfarquisa.util.Pagination;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"classpath:com/darkbit/appfarquisa/test/system-test-config.xml"})
+
 public class SedeDaoImplTest {
 
 	@Autowired
@@ -22,16 +23,14 @@ public class SedeDaoImplTest {
 
 	@Test
 	public void testAddNewSede() {
-		assertNotNull(sedeService);
-		
-	}
-	
+		assertNotNull(sedeService);		
+	}	
 	
 	@Test
 	public void testgetAllSede(){
 		Pagination pagination=new Pagination(0);
 		assertEquals(sedeService.getAll(pagination).size(), 10);
-		assertEquals(pagination.getTotalCount().longValue(), 1004L);
+		assertEquals(pagination.getTotalCount().intValue(), 1004);
 	}
 	
 

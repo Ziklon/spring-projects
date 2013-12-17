@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.darkbit.appfarquisa.dao.EmpresaDao;
 import com.darkbit.appfarquisa.domain.Empresa;
+import com.darkbit.appfarquisa.domain.Sede;
 import com.darkbit.appfarquisa.service.EmpresaService;
 import com.darkbit.appfarquisa.util.Pagination;
 
@@ -35,9 +36,15 @@ public class EmpresaServiceImpl implements EmpresaService {
 	public List<Empresa> getAll() {
 		return empresaDao.getAll();
 	}
+	
+	
 
 	public List<Empresa> getAll(Pagination pagination) {
 		return empresaDao.getAll(pagination);
+	}
+
+	public List<Empresa> findBySede(Sede sede) {
+		return empresaDao.getBySede(sede);
 	}
 
 }

@@ -21,8 +21,6 @@
 		
 		<many-to-one name="rol" class="com.darkbit.appfarquisa.domain.Rol" fetch="select">
             <column name="ROL_ID" not-null="true" />
-        </many-to-one>		
-		
-		
+        </many-to-one>
 	</class>
 </hibernate-mapping>

@@ -2,6 +2,8 @@ package com.darkbit.appfarquisa.domain;
 
 public class Rol {
 	
+	private static final long serialVersionUID = 1L;
+	
 	public Integer rolId;
 	public String descripcion;
 	
