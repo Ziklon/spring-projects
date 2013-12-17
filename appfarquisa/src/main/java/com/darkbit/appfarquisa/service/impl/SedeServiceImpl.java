@@ -11,8 +11,9 @@ import com.darkbit.appfarquisa.domain.Sede;
 import com.darkbit.appfarquisa.service.SedeService;
 import com.darkbit.appfarquisa.util.Pagination;
 
-@Transactional(readOnly = true)
+
 @Service
+@Transactional(readOnly = true)
 public class SedeServiceImpl implements SedeService {
 
 	@Autowired

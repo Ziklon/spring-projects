@@ -1,17 +1,18 @@
 package com.darkbit.appfarquisa.domain;
 
+import org.apache.commons.lang.builder.ToStringBuilder;
+
 public class Empleado {
 
-	private static final long serialVersionUID = 1L;	
+	private static final long serialVersionUID = 1L;
 	public Integer empleadoId;
-	public Rol rol;	
+	public Rol rol;
 	public String correo;
 	public String nombres;
 	public String apellidos;
-	
-	
+
 	public Empleado() {
-		
+
 	}
 
 	public Integer getEmpleadoId() {
@@ -53,6 +54,10 @@ public class Empleado {
 	public void setApellidos(String apellidos) {
 		this.apellidos = apellidos;
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return ToStringBuilder.reflectionToString(this);
+	}
+
 }

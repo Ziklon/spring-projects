@@ -11,8 +11,8 @@ import com.darkbit.appfarquisa.domain.Empleado;
 import com.darkbit.appfarquisa.service.EmpleadoService;
 import com.darkbit.appfarquisa.util.Pagination;
 
-@Transactional(readOnly = true)
 @Service
+@Transactional(readOnly = true)
 public class EmpleadoServiceImpl implements EmpleadoService {
 
 	@Autowired

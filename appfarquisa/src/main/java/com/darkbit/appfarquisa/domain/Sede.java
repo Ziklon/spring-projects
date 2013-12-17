@@ -1,15 +1,17 @@
 package com.darkbit.appfarquisa.domain;
 
+import org.apache.commons.lang.builder.ToStringBuilder;
+
 public class Sede {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	private Integer sedeId;
 	private String descripcion;
 	private String direccion;
-	
-	public Sede(){
-		
+
+	public Sede() {
+
 	}
 
 	public Integer getSedeId() {
@@ -35,6 +37,9 @@ public class Sede {
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return ToStringBuilder.reflectionToString(this);
+	}
 }

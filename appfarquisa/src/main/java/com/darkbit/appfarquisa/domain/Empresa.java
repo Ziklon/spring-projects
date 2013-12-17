@@ -1,5 +1,7 @@
 package com.darkbit.appfarquisa.domain;
 
+import org.apache.commons.lang.builder.ToStringBuilder;
+
 public class Empresa {
 
 	private static final long serialVersionUID = 1L;
@@ -34,6 +36,11 @@ public class Empresa {
 
 	public void setSede(Sede sede) {
 		this.sede = sede;
+	}
+	
+	@Override
+	public String toString() {
+		return ToStringBuilder.reflectionToString(this);
 	}
 	
 	

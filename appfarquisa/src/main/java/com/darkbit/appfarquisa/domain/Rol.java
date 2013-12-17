@@ -1,5 +1,7 @@
 package com.darkbit.appfarquisa.domain;
 
+import org.apache.commons.lang.builder.ToStringBuilder;
+
 public class Rol {
 	
 	private static final long serialVersionUID = 1L;
@@ -27,6 +29,9 @@ public class Rol {
 		this.descripcion = descripcion;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return ToStringBuilder.reflectionToString(this);
+	}
 
 }

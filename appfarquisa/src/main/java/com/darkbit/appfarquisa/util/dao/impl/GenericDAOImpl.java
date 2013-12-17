@@ -46,7 +46,7 @@ public abstract class GenericDAOImpl<T, Id extends Serializable> {
 	@SuppressWarnings("unchecked")
 	public List<T> getAll(Pagination pagination) {
 		if (pagination == null)
-			return getAll();
+			pagination=new Pagination();
 		String hql = "from " + classObj.getSimpleName();
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		query.setFirstResult(pagination.getStart());
