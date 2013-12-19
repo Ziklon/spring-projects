@@ -16,20 +16,21 @@ import com.darkbit.appfarquisa.service.SedeService;
 import com.darkbit.appfarquisa.util.Pagination;
 
 @Controller
-
+@RequestMapping(value="/sede")
 public class SedeController {
 
 	@Autowired
 	private SedeService sedeService;
 
-	@RequestMapping(value = "/sede", method=RequestMethod.GET)
-	public @ResponseBody Map<String, Object> getListSede(@ModelAttribute Pagination pagination) {
-		
+	@RequestMapping(value = "/list", method=RequestMethod.GET)
+	public @ResponseBody Map<String, Object> getListSede(@ModelAttribute Pagination pagination) {		
 		Map<String, Object> response = new HashMap<String, Object>();
 		List<Sede> listSede = sedeService.getAll(pagination);
 		response.put("data", listSede);
 		response.put("totalCount", pagination.getTotalCount());
 		return response;
 	}
+	
+	
 
 }

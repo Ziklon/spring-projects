@@ -11,6 +11,7 @@
 	<context:component-scan base-package="com.darkbit.appfarquisa" />
 
 
+	
 
 	<!-- Drives transactions in a local Hibernate environment -->
 	<bean id="transactionManager"

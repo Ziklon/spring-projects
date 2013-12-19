@@ -89,6 +89,11 @@
 			<artifactId>hibernate-ehcache</artifactId>
 			<version>${org.hibernate.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.webflow</groupId>
+			<artifactId>spring-webflow</artifactId>
+			<version>2.3.2.RELEASE</version>
+		</dependency>
 	</dependencies>
 
 	<build>
