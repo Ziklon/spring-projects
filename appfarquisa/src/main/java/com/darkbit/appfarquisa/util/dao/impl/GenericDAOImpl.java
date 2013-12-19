@@ -8,7 +8,6 @@ import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Projections;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.darkbit.appfarquisa.util.Pagination;
 

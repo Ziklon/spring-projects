@@ -33,14 +33,16 @@
 				<value>classpath:com/darkbit/appfarquisa/domain/Sede.hbm.xml</value>
 			</list>
 		</property>
+		
 		<property name="hibernateProperties">
-			<value>
-				hibernate.format_sql = true
-				hibernate.show_sql = true
-				hibernate.dialect = org.hibernate.dialect.MySQL5InnoDBDialect
-			</value>
+	        <props>
+	            <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+	            <prop key="hibernate.show_sql">true</prop>
+	        </props>
 
-		</property>
+    	</property>
+		
+	
 	</bean>
 
 	<!-- Mysql Database -->
