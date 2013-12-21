@@ -16,11 +16,8 @@
 	<tx:annotation-driven />
 	<mvc:annotation-driven /> 
 	
-	<mvc:default-servlet-handler/>
-	
-	
-	
-	
+	<mvc:resources  mapping="/resources/**" location="/resources/" />
+	<mvc:resources  mapping="/app/**" location="/app/" />   
 	
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/"/>

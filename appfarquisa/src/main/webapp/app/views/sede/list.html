@@ -1,0 +1,36 @@
+<div class="container">
+    <h2>Lista de Sede</h2>
+
+    <div class="table-responsive">
+
+        <h1>Rows : {{totalCount}}</h1>
+
+        <h2>Leng : {{pages.length}}</h2>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Descripción</th>
+                <th>Dirección</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr data-ng-repeat="sede in sedes">
+                <td>{{sede.sedeId}}</td>
+                <td>{{sede.descripcion}}</td>
+                <td>{{sede.direccion}}</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <ul class="pagination pagination-lg">
+
+
+            <li><a href="#">«</a></li>
+            <li data-ng-repeat="page in pages"><a href="" data-ng-click="goPage(page);">{{page+1}}</a></li>
+            <li><a href="#">»</a></li>
+        </ul>
+    </div>
+
+</div>
